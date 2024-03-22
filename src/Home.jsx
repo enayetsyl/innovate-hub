@@ -37,7 +37,7 @@ const Home = () => {
       </div>
 
       {/* Main bar */}
-      <div className=" border border-zinc-400 rounded-xl flex-auto min-w-[760px] ">
+      <div className=" border border-solid border-zinc-400 rounded-xl flex-auto min-w-[760px] ">
         <div>
           {/* Nav bar */}
           <div>

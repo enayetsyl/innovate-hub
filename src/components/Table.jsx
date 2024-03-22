@@ -43,8 +43,8 @@ const Table = ({ searchQuery, checkedRows, setCheckedRows }) => {
       <table className="w-full border-collapse border ">
         {/* Table Heading */}
         <thead>
-          <tr className="border">
-            <th className="border min-w-72">
+          <tr className="border border-solid border-zinc-400">
+            <th className="border border-solid border-zinc-400 min-w-72">
               <div className="flex justify-between items-center gap-1 px-4 py-2 text-lg">
                 <div className="flex justify-center items-center gap-1">
                   <span>
@@ -59,13 +59,13 @@ const Table = ({ searchQuery, checkedRows, setCheckedRows }) => {
                 <FaPlus />
               </div>
             </th>
-            <th className="border min-w-[200px]">Description</th>
-            <th className="border min-w-[200px]">Member</th>
-            <th className="border min-w-[100px]">Category</th>
-            <th className="border min-w-[100px] !max-w-[100px] overflow-x-hidden">
+            <th className=" min-w-[200px]">Description</th>
+            <th className="border border-solid border-zinc-400 min-w-[200px]">Member</th>
+            <th className=" min-w-[100px]">Category</th>
+            <th className="border border-solid border-zinc-400 min-w-[100px] !max-w-[100px] overflow-x-hidden">
               Tag
             </th>
-            <th className="border">Next Meeting</th>
+            <th className="">Next Meeting</th>
             <th className="border-0 min-w-[60px]">
               <div className=" flex justify-center items-center ">
                 <FaPlus />
@@ -80,7 +80,7 @@ const Table = ({ searchQuery, checkedRows, setCheckedRows }) => {
               {row.map((cell, cellIndex) => (
                 <td
                   key={cellIndex}
-                  className={`text-lg p-2 border ${
+                  className={`text-lg p-2 border border-solid border-zinc-400 ${
                     checkedRows.includes(rowIndex) ? "bg-gray-200" : ""
                   }`}
                 >
@@ -171,7 +171,7 @@ const Table = ({ searchQuery, checkedRows, setCheckedRows }) => {
                   )}
                 </td>
               ))}
-              <td className="border"></td>
+              <td className="border border-solid border-zinc-400"></td>
             </tr>
           ))}
           {/* Final raw */}
@@ -184,7 +184,7 @@ const Table = ({ searchQuery, checkedRows, setCheckedRows }) => {
                 <span className="text-gray-500">Count</span>
               </p>
             </td>
-            <td className="border px-4 py-2">
+            <td className="border border-solid border-zinc-400 px-4 py-2">
               <div
                 className="flex
      justify-end items-center text-gray-500 gap-2 cursor-pointer "
@@ -193,7 +193,7 @@ const Table = ({ searchQuery, checkedRows, setCheckedRows }) => {
                 <p>Add Calculation</p>
               </div>
             </td>
-            <td className="border px-4 py-2">
+            <td className="border border-solid border-zinc-400 px-4 py-2">
               <div
                 className="flex
      justify-end items-center text-gray-500 gap-2 cursor-pointer"
@@ -202,7 +202,7 @@ const Table = ({ searchQuery, checkedRows, setCheckedRows }) => {
                 <p>Add Calculation</p>
               </div>
             </td>
-            <td className="border px-4 py-2">
+            <td className="border border-solid border-zinc-400 px-4 py-2">
               <div
                 className="flex
      justify-end items-center text-gray-500 gap-2  cursor-pointer"
@@ -211,9 +211,9 @@ const Table = ({ searchQuery, checkedRows, setCheckedRows }) => {
                 <p>Add Calculation</p>
               </div>
             </td>
-            <td className="border"></td>
-            <td className="border"></td>
-            <td className="border"></td>
+            <td className="border border-solid border-zinc-400"></td>
+            <td className="border border-solid border-zinc-400"></td>
+            <td className="border border-solid border-zinc-400"></td>
           </tr>
         </tbody>
       </table>

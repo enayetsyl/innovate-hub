@@ -6,7 +6,7 @@ import SidebarBottom from "./SidebarBottom";
 
 const Sidebar = () => {
   return (
-    <div className="border border-zinc-400 rounded-xl min-h-screen">
+    <div className="border border-solid border-zinc-400 rounded-xl min-h-screen">
 
       {/* Container */}
       <div className="p-5">

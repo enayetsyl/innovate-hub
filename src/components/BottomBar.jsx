@@ -7,7 +7,7 @@ import Button from "./sharedItem/Button";
 
 const BottomBar = ({checkedRows}) => {
   return (
-    <div className="rounded-xl p-2 shadow-xl mt-10 mb-3 bg-white/85 flex justify-center items-center gap-5 max-w-xl mx-auto border border-gray-200 ">
+    <div className="rounded-xl p-2 shadow-xl mt-10 mb-3 bg-white/85 flex justify-center items-center gap-5 max-w-xl mx-auto border border-solid border-gray-200 ">
       <div className="flex justify-center items-center gap-1">
         {/* Selected item showing */}
         <p className="text-center  font-bold h-8 w-8 rounded-lg bg-black  text-white text-lg">{checkedRows.length}</p>

@@ -12,7 +12,7 @@ const Navbar = ({setSearchQuery, searchQuery}) => {
         <div className="flex justify-center items-center gap-5">
 
           {/* Search bar */}
-          <div className="border border-zinc-400 shadow-lg rounded-xl py-1 px-2 flex justify-start items-center gap-1">
+          <div className="border border-solid border-zinc-400 shadow-lg rounded-xl py-1 px-2 flex justify-start items-center gap-1">
           <CiSearch/> <input type="text" name="" id="" placeholder="Search for.." className="outline-none"
           value={searchQuery}
           onChange={(e) =>setSearchQuery(e.target.value)}
@@ -24,7 +24,7 @@ const Navbar = ({setSearchQuery, searchQuery}) => {
             {
               navbarIcon.map(icon => (
                 <div key={icon}
-                className="border border-zinc-400 shadow-lg rounded-xl p-2 cursor-pointer hover:-translate-y-1 transition-all duration-300"
+                className="border border-solid border-zinc-400 shadow-lg rounded-xl p-2 cursor-pointer hover:-translate-y-1 transition-all duration-300"
                 onClick={()=> toast(`Imagine dropdown list appeared.`)}
                 >
                     {icon.icon}
