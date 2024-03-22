@@ -1,14 +1,14 @@
 import { FaPlus } from "react-icons/fa6";
-import {  tableRowInfo } from "../constant";
+import { tableRowInfo } from "../constant";
 import { useState } from "react";
 
-const Table = ({searchQuery}) => {
+const Table = ({ searchQuery }) => {
+  // States for checkbox select
   const [selectAll, setSelectAll] = useState(false);
   const [checkedRows, setCheckedRows] = useState([]);
 
-
-
   // Function to handle checkbox change in the header
+
   const handleSelectAllChange = () => {
     setSelectAll(!selectAll);
     if (!selectAll) {
@@ -28,26 +28,30 @@ const Table = ({searchQuery}) => {
     }
   };
 
-// Function to filter table data based on search query
-const filteredRows = tableRowInfo.filter(row =>
-  row.some(cell =>
-    cell.text && cell.text.toLowerCase().includes(searchQuery.toLowerCase())
-  )
-);
-
+  // Function to filter table data based on search query
+  const filteredRows = tableRowInfo.filter((row) =>
+    row.some(
+      (cell) =>
+        // eslint-disable-next-line react/prop-types
+        cell.text && cell.text.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+  );
 
   return (
     <div className="relative px-5  overflow-x-auto">
+      {/* Table */}
       <table className="w-full border-collapse border ">
+        {/* Table Heading */}
         <thead>
           <tr className="border">
             <th className="border min-w-72">
               <div className="flex justify-between items-center gap-1 px-4 py-2 text-lg">
                 <div className="flex justify-center items-center gap-1">
                   <span>
-                    <input type="checkbox"
-                    checked={selectAll}
-                    onChange={handleSelectAllChange}
+                    <input
+                      type="checkbox"
+                      checked={selectAll}
+                      onChange={handleSelectAllChange}
                     />
                   </span>
                   <span>Brand</span>
@@ -69,6 +73,7 @@ const filteredRows = tableRowInfo.filter(row =>
             </th>
           </tr>
         </thead>
+        {/* Table Body */}
         <tbody>
           {filteredRows.map((row, rowIndex) => (
             <tr key={rowIndex} className="text-lg ">
@@ -79,12 +84,16 @@ const filteredRows = tableRowInfo.filter(row =>
                     checkedRows.includes(rowIndex) ? "bg-gray-200" : ""
                   }`}
                 >
+                  {/* First column */}
                   <div className="flex justify-between items-center gap-8">
                     <div className="flex justify-start items-center gap-3">
-                      {cell.checkbox && <input type="checkbox" 
-                      onChange={() => handleCheckboxChange(rowIndex)}
-                      className="h-5 w-5 rounded-2xl checked:bg-black checked:text-white"
-                      />}
+                      {cell.checkbox && (
+                        <input
+                          type="checkbox"
+                          onChange={() => handleCheckboxChange(rowIndex)}
+                          className="h-5 w-5 rounded-2xl checked:bg-black checked:text-white"
+                        />
+                      )}
                       {cell.image && !Array.isArray(cell.image) && (
                         <img
                           className="h-6 w-6 object-cover"
@@ -103,7 +112,7 @@ const filteredRows = tableRowInfo.filter(row =>
                       {cell.quantity && <span>{cell.quantity}</span>}
                     </div>
                   </div>
-
+                  {/* Description column */}
                   <div>
                     {cell.desc && (
                       <span className="overflow-x-hidden text-ellipsis line-clamp-1">
@@ -111,6 +120,7 @@ const filteredRows = tableRowInfo.filter(row =>
                       </span>
                     )}
                   </div>
+                  {/* Category column */}
                   <div className="flex gap-1">
                     {cell.categories &&
                       cell.categories.map((category, index) => (
@@ -119,6 +129,7 @@ const filteredRows = tableRowInfo.filter(row =>
                         </span>
                       ))}
                   </div>
+                  {/* Member column */}
                   <div className="flex">
                     {Array.isArray(cell.image) &&
                       cell.image.map((src, index) => (
@@ -137,7 +148,7 @@ const filteredRows = tableRowInfo.filter(row =>
                         />
                       ))}
                   </div>
-
+                  {/* Tag column */}
                   <div className="min-w-[180px] !max-w-[180px] overflow-hidden">
                     {cell.tags &&
                       cell.tags.map((tag, index) => (
@@ -147,6 +158,7 @@ const filteredRows = tableRowInfo.filter(row =>
                       ))}
                     <div></div>
                   </div>
+                  {/* Meeting column */}
                   {cell.meeting && (
                     <span
                       className={`whitespace-nowrap leading-none pb-1 ${cell.meetingDesign}`}
@@ -159,10 +171,15 @@ const filteredRows = tableRowInfo.filter(row =>
               <td className="border"></td>
             </tr>
           ))}
+          {/* Final raw */}
           <tr className=" border text-lg ">
             <td className="px-4 py-2">
-             <p className=" flex justify-end gap-2">  <span className="font-bold ">{checkedRows.length}</span>{" "}
-              <span className="text-gray-500">Count</span></p>
+              {/* Dynamic raw selection count showing */}
+              <p className=" flex justify-end gap-2">
+                {" "}
+                <span className="font-bold ">{checkedRows.length}</span>
+                <span className="text-gray-500">Count</span>
+              </p>
             </td>
             <td className="border px-4 py-2">
               <div
