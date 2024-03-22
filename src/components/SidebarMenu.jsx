@@ -3,6 +3,7 @@ import SidebarMenuItem from './SidebarMenuItem'
 
 const SidebarMenu = () => {
   return (
+    // Parent component
     <div className=' overflow-auto'>
       {
         menuData.map((item, index) => <SidebarMenuItem

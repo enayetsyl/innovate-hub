@@ -3,8 +3,10 @@ import { FaCaretDown, FaCaretUp } from "react-icons/fa6";
 import { toast } from "react-toastify";
 
 const SidebarMenuItem = ({ item }) => {
+  // State for storing sub-menu status.
   const [isOpen, setIsOpen] = useState(false);
 
+  // Function for opening and closing sub-menu
   const toggleOpen = () => {
     setIsOpen(!isOpen);
   };
