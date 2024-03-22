@@ -7,9 +7,11 @@ const TeamSection = () => {
   return (
     <div className="border rounded-xl mt-7 border-zinc-400 ">
       <div className=" ">
+        {/* Container */}
         <div className="border-b border-zinc-400 p-3 pb-5 space-y-2">
         {
           teamTitleInfo.map(item => (
+            // Individual Link
             <div key={item.title}
             className="flex justify-between items-center gap-3 hover:bg-gray-300 p-2 hover:rounded-lg transition-all duration-300 group cursor-pointer "
             onClick={()=> toast(`Imagine you redirected to ${item.title} page.`)}
