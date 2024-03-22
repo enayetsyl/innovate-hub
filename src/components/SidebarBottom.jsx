@@ -3,9 +3,11 @@ import { sidebarBottomInfo } from "../constant"
 
 const SidebarBottom = () => {
   return (
+    // Container
     <div className="mt-10 space-y-2 mb-2">
     {
       sidebarBottomInfo.map(item => (
+        // Individual item
         <div key={item.title}
         className="flex justify-between items-center gap-5 hover:bg-gray-300 p-2 hover:rounded-lg transition-all duration-300 group cursor-pointer"
         onClick={()=> toast(`Imagine you redirected to ${item.title} page.`)}
