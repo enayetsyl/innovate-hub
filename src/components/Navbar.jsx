@@ -5,6 +5,7 @@ import { toast } from "react-toastify"
 const Navbar = ({setSearchQuery, searchQuery}) => {
   return (
     <div className="flex justify-between items-center gap-10 p-5 border-b border-zinc-400">
+      {/* Heading */}
         <h1 className="font-semibold text-2xl">Products</h1>
         
         {/* Search bar and icons */}
