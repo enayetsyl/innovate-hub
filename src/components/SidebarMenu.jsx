@@ -3,7 +3,7 @@ import SidebarMenuItem from './SidebarMenuItem'
 
 const SidebarMenu = () => {
   return (
-    <div className='sidebar overflow-auto'>
+    <div className=' overflow-auto'>
       {
         menuData.map((item, index) => <SidebarMenuItem
         key={index}
