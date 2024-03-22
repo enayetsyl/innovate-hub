@@ -2,10 +2,10 @@ import { FaPlus } from "react-icons/fa6";
 import { tableRowInfo } from "../constant";
 import { useState } from "react";
 
-const Table = ({ searchQuery }) => {
+const Table = ({ searchQuery, checkedRows, setCheckedRows }) => {
   // States for checkbox select
   const [selectAll, setSelectAll] = useState(false);
-  const [checkedRows, setCheckedRows] = useState([]);
+ 
 
   // Function to handle checkbox change in the header
 

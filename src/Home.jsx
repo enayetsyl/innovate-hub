@@ -9,7 +9,7 @@ import { IoMdClose } from "react-icons/io";
 const Home = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false); 
   const [searchQuery, setSearchQuery] = useState(''); // State for search string storage
-
+  const [checkedRows, setCheckedRows] = useState([]);
   // Function for sidebar open in small and medium screen
 
   const toggleSidebar = () => {
@@ -51,11 +51,16 @@ const Home = () => {
 
           {/* Table */}
           <div className="flex-1">
-            <Table searchQuery={searchQuery}/>
+            <Table searchQuery={searchQuery}
+            setCheckedRows={setCheckedRows}
+            checkedRows={checkedRows}
+            />
 
           </div>
             {/* Bottom Bar */}
-            <BottomBar />
+            <BottomBar
+            checkedRows={checkedRows}
+            />
         </div>
       </div>
     </div>
