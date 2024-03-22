@@ -1,4 +1,3 @@
-import Paper from "@mui/material/Paper";
 import SidebarHeader from "./SidebarHeader";
 import TeamSection from "./TeamSection";
 import { foldersData } from "../constant";

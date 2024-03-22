@@ -7,8 +7,10 @@ import { useState } from "react";
 import BottomBar from "./components/BottomBar";
 import { IoMdClose } from "react-icons/io";
 const Home = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(false); // Sidebar open by default on larger screens
-  const [searchQuery, setSearchQuery] = useState('');
+  const [sidebarOpen, setSidebarOpen] = useState(false); 
+  const [searchQuery, setSearchQuery] = useState(''); // State for search string storage
+
+  // Function for sidebar open in small and medium screen
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
