@@ -88,11 +88,14 @@ const Table = ({ searchQuery, checkedRows, setCheckedRows }) => {
                   <div className="flex justify-between items-center gap-8">
                     <div className="flex justify-start items-center gap-3">
                       {cell.checkbox && (
+                        <label className="flex items-center">
                         <input
                           type="checkbox"
                           onChange={() => handleCheckboxChange(rowIndex)}
                           className="h-5 w-5 rounded-2xl checked:bg-black checked:text-white"
                         />
+                        <span className="ml-2">{cell.label}</span>
+                      </label>
                       )}
                       {cell.image && !Array.isArray(cell.image) && (
                         <img

@@ -1,7 +1,9 @@
 
-const Button = ({children, icon, className}) => {
+const Button = ({children, icon, className, onClick}) => {
   return (
-    <button className={`py-2 px-3 text-white ${className} flex justify-center items-center gap-2`}>
+    <button className={` ${className}`}
+    onClick={onClick}
+    >
       <span>{icon && icon}</span><span>{children}</span>
     </button>
   )

@@ -3,6 +3,7 @@ import { AiOutlineDelete } from "react-icons/ai";
 import { FaCaretDown } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import { toast } from "react-toastify";
+import Button from "./sharedItem/Button";
 
 const BottomBar = ({checkedRows}) => {
   return (

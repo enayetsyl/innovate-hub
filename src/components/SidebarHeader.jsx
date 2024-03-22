@@ -10,7 +10,7 @@ const SidebarHeader = () => {
    <div className='flex gap-2 items-center'>
 
     {/* Logo */}
-   <button className='p-2 bg-black/80 rounded-lg text-white'><BsBook className="h-8 w-8" /></button>
+   <i className='p-2 bg-black/80 rounded-lg text-white'><BsBook className="h-8 w-8" /></i>
 
     {/* Company Name */}
     <div>
